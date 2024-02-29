@@ -1,0 +1,85 @@
+.dashboard {
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.dashboard header{
+  padding: 20px 0;
+}
+
+.row {
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+
+/* Card */
+.basecard {
+  width: 38.5%;
+  height: 220px;
+  background-image: url('../assets/basecard.svg');
+  background-size: cover;
+    border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.basecard label {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem; 
+}
+
+.basecard p {
+  color: white;
+  margin: 0;
+  font-size: 0.8rem; 
+}
+
+.basecard img {
+  max-width: 50px;
+}
+
+.card {
+  padding: 10px 20px;
+}
+
+.top-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+
+.credentials{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Balance */
+.wallet-container {
+  width: 60%;
+  height: 220px;
+  background-color: var(--primary-color);
+  border-radius: var(--rounded-border-radius);
+  box-shadow: var(--main-box-shadow);
+}
+.wallet-container label {
+  margin: 0;
+}
+
+.wallet {
+  padding: 20px 20px;
+}
+
+.wallet-row {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fund h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+

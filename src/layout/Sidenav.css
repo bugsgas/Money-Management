@@ -1,0 +1,77 @@
+.sidenav {
+  width: 76px;
+  min-width: 75px;
+  background: var(--primary-color);
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  color: var(--text-color);
+}
+.sidenav-content {
+  position: fixed;
+  width: inherit;
+}
+.sidenav .user {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 40px 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.sidenav .links {
+  margin-top: 80px;
+  margin-left: 20px;
+}
+.sidenav .links li {
+  margin-top: 10px;
+}
+.sidenav .links a {
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+  width: 100%;
+  color: #fff;
+  box-sizing: border-box;
+}
+.sidenav .links img {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+
+}
+.sidenav .links a.active {
+  color: #555;
+  background: var(--bg-color);
+  border-radius: 20px 0 0 20px;
+}
+.sidenav .links .active img {
+  filter: invert(40%);
+}
+
+.navbar .nav-bottom {
+  margin-top: 100px;
+}
+
+.logout-button {
+  margin-top: 200px;
+  background-color: var(--primary-color);
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  border-radius: 50%; /* Make it circular */
+  width: 40px; /* Adjust width */
+  height: 40px; /* Adjust height */
+  margin-left: 1px;
+}
+
+.logout-button img{
+  margin-left: 5px;
+}
+.logout-button:hover {
+  background-color: var(--highlight-color);
+}
+.logout-button:hover img {
+  filter: invert(100%);
+}
+

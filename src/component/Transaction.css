@@ -1,0 +1,116 @@
+.transaction-flex{
+  display: flex;
+}
+.payment,
+.transfer {
+  width: 100%;
+  margin: 20px 20px;
+  background-color: var(--primary-color);
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.payment-box,
+.transfer-box{
+  padding: 20px 20px;
+}
+
+.transaction-container {
+  width: 49%;
+  height: 240px;
+  background-color: var(--primary-color);
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+.transaction-container h2 {
+  color: var(--highlight-color);
+}
+
+/* Hide the scrollbar */
+.transaction-container::-webkit-scrollbar {
+  width: 0; /* Set the width to 0 to hide the scrollbar */
+}
+
+.transaction {
+  padding: 0px 20px;
+}
+
+.transaction-title {
+  position: sticky; /* Set position to sticky */
+  top: 0; /* Stick to the top */
+  background-color: var(--primary-color); /* Same background color as transaction container */
+  padding: 10px 0; /* Add padding */
+  z-index: 1; /* Ensure it stays above other content */
+}
+
+.transaction-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add space between elements */
+  margin-bottom: 15px;
+}
+
+.transaction-details {
+  display: flex;
+  justify-content: space-between; /* Add space between elements */
+  align-items: center;
+  flex-grow: 1; /* Allow flex-grow to fill remaining space */
+}
+
+
+.circle {
+  width: 50px; /* Adjust the width and height to make it a circle */
+  height: 50px; /* Adjust the width and height to make it a circle */
+  border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+  background-color: var(--highlight-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.delete {
+  width: 25px; /* Adjust the width and height to make it a circle */
+  height: 25px; /* Adjust the width and height to make it a circle */
+  border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+  border: 1px solid var(--highlight-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer; /* Add pointer cursor */
+}
+
+.delete p{
+  color: var(--highlight-color);
+  font-size: 1rem;
+}
+.delete:hover{
+  background-color: rgba(222, 87, 87, 0.9);
+}
+.delete:hover p {
+  color: white; /* Change text color when hovered */
+}
+
+
+
+.circle p {
+  margin: 0; /* Remove default margin for the paragraph */
+  color: var(--primary-color);
+}
+
+.center {
+  text-align: center; /* Center text horizontally */
+}
+
+.center p {
+  margin: 10px;
+}
+
+.center a {
+  margin: 10px;
+  text-decoration: none; /* Remove underline */
+}
+
+
