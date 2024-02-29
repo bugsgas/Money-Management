@@ -4,13 +4,16 @@ import './Sidenav.css'
 import DashboardIcon from '../assets/dashboard_icon.svg'
 import WalletIcon from '../assets/wallet_icon.svg'
 import TransferIcon from '../assets/transfer_icon.svg'
-import SettingIcon from '../assets/setting_icon.svg'
 import ProfileIcon from '../assets/profile_icon.svg'
 import LogoutIcon from '../assets/logout_icon.svg'
-
-
+import { useName } from '../hooks/useName'
 
 export default function Sidenav() {
+  const { updateName } = useName();
+
+  const handleLogout = () => {
+    updateName('');
+  };
 
   return (
     <div className='sidenav'>
@@ -30,13 +33,10 @@ export default function Sidenav() {
               <NavLink to="/create">
                 <img src={TransferIcon} alt="transaction-icon" />
               </NavLink>
-              <NavLink to="/setting">
-                <img src={SettingIcon} alt="setting-icon" />
-              </NavLink>
               <NavLink to="/profile">
                 <img src={ProfileIcon} alt="profile-icon" />
               </NavLink>       
-              <button className="logout-button" >
+              <button onClick={handleLogout} className="logout-button" >
                   <img src={LogoutIcon} alt="logout-icon" />
               </button>       
             </li>
