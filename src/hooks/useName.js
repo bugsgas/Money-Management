@@ -1,6 +1,5 @@
-// useName.js
 import { useContext } from 'react';
-import { NameContext } from '../context/NameContext'; // Update the import path
+import { NameContext } from '../context/NameContext'
 
 export function useName() {
   const context = useContext(NameContext);

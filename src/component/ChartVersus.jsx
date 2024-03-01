@@ -10,39 +10,39 @@ export default function ChartVersus({ expensePercentage, incomePercentage }) {
       const ctx = chartContainer.current.getContext('2d');
 
       chartInstance.current = new Chart(ctx, {
-        type: 'bar', // Use horizontalBar type
+        type: 'bar',
         data: {
-          labels: ['Expense', 'Income'], // Labels for the groups
+          labels: ['Expense', 'Income'], 
           datasets: [{
             label: 'Expense Percentage',
-            data: [expensePercentage], // Data for Dataset 1
+            data: [expensePercentage],
             backgroundColor: 'rgba(222, 87, 87, 0.9)',
-            barThickness: 30, // Adjust the width of the bars
-            maxBarThickness: 40, // Set the maximum width of the bars
+            barThickness: 30,
+            maxBarThickness: 40,
           },
           {
             label: 'Income Percentage',
-            data: [incomePercentage], // Data for Dataset 2
+            data: [incomePercentage], 
             backgroundColor: 'rgba(87, 92, 222, 0.9)',
-            barThickness: 30, // Adjust the width of the bars
-            maxBarThickness: 40, // Set the maximum width of the bars
+            barThickness: 30, 
+            maxBarThickness: 40,
           }]
         },
         options: {
-          indexAxis: 'y', // Set the index axis to y to make it horizontal
+          indexAxis: 'y',
           plugins: {
             legend: {
-              display: false // Remove the legend
+              display: false 
             }
           },
           scales: {
             x: {
-              display: false, // Remove the x scale
-              stacked: true // Stack bars horizontally
+              display: false, 
+              stacked: true 
             },
             y: {
-              display: false, // Remove the y scale
-              stacked: true // Stack bars vertically
+              display: false,
+              stacked: true 
             }
           }
         }
@@ -56,15 +56,13 @@ export default function ChartVersus({ expensePercentage, incomePercentage }) {
     };
   }, [expensePercentage, incomePercentage]);
 
-  // Function to resize the chart container
   const resizeChart = () => {
     if (chartContainer.current && chartContainer.current.parentNode) {
-      chartContainer.current.parentNode.style.height = '200px'; // Set new height
-      chartContainer.current.parentNode.style.width = '100%'; // Set new width
+      chartContainer.current.parentNode.style.height = '200px'; 
+      chartContainer.current.parentNode.style.width = '100%'; 
     }
   };
 
-  // Call resizeChart when component mounts
   useEffect(() => {
     resizeChart();
   }, []);

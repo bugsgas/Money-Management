@@ -1,18 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
-import 'chartjs-plugin-datalabels'; // Import the datalabels plugin
+import 'chartjs-plugin-datalabels'; 
 
 export default function ChartDonut({ depositAmount, transferAmount, paymentAmount }) {
   const chartContainer = useRef(null);
   const chartInstance = useRef(null);
 
   useEffect(() => {
-    // Destroy existing Chart instance if it exists
     if (chartInstance.current) {
       chartInstance.current.destroy();
     }
 
-    // Create the chart
     const ctx = chartContainer.current.getContext('2d');
 
     chartInstance.current = new Chart(ctx, {
@@ -27,11 +25,11 @@ export default function ChartDonut({ depositAmount, transferAmount, paymentAmoun
       options: {
         plugins: {
           legend: { display: false, position: 'bottom' },
-          datalabels: { // Configure the datalabels plugin
-            color: 'white', // Font color
-            font: { weight: 'bold' }, // Font weight
-            formatter: (value, context) => { // Custom formatter to display value
-              return '$' + value; // Add dollar sign before the value
+          datalabels: { 
+            color: 'white', 
+            font: { weight: 'bold' }, 
+            formatter: (value, context) => { 
+              return '$' + value; 
             }
           }
         },

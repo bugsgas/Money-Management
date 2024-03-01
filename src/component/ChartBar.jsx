@@ -39,8 +39,8 @@ export default function ChartBar() {
         };
       });
 
-      // Prepare data for chart
-      const labels = ['February']; // Adjust labels as needed
+     
+      const labels = ['February'];
       const depositData = chartData.map(item => item.deposit);
       const transferData = chartData.map(item => item.transfer);
       const paymentData = chartData.map(item => item.payment);

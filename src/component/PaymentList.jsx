@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Transaction.css';
 
 export default function PaymentList() {
-  const { transactions, deleteTransaction } = useFundContext();
+  const { transactions } = useFundContext();
 
   const paymentTransactions = transactions.filter(transaction => transaction.type === 'payment');
 
@@ -30,9 +30,6 @@ export default function PaymentList() {
                     <h2>${transaction.amount}</h2>
                   </div>
                 </div>
-                  {/* <div className="delete" onClick={() => deleteTransaction(index)}>
-                    <p>X</p>
-                  </div> */}
               </li>
             ))}
           </ul>

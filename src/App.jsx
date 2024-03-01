@@ -5,8 +5,6 @@ import Sidenav from './layout/Sidenav'
 import Wallet from './pages/Wallet'
 import Sidebar from './layout/Sidebar'
 import Create from './pages/Create'
-import DepositList from './component/DepositList'
-import AddMoney from './component/AddMoney'
 import Register from './pages/Register'
 import { useName } from './hooks/useName'
 

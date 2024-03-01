@@ -1,6 +1,6 @@
 import { useFundContext } from '../context/FundContext';
-import 'chartjs-plugin-datalabels'; // Import the datalabels plugin
-import ChartDonut from './ChartDonut'; // Import the ChartDonut component
+import 'chartjs-plugin-datalabels'; 
+import ChartDonut from './ChartDonut'; 
 
 export default function Analytics() {
   const { transactions } = useFundContext();

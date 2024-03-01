@@ -1,6 +1,7 @@
 // Register.js
 import React, { useState } from 'react';
-import { useName } from '../hooks/useName'; // Update the import path
+import { useName } from '../hooks/useName';
+import './Register.css'
 
 export default function Register() {
   const { updateName } = useName();
@@ -14,9 +15,8 @@ export default function Register() {
 
   return (
     <div>
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
+      <form className='register-form' onSubmit={handleSubmit}>
+        <h2>Name</h2>
         <input
           required
           type="text"
@@ -24,7 +24,7 @@ export default function Register() {
           onChange={(e) => setInputName(e.target.value)}
           placeholder="Enter your name"
         />
-        <button type="submit">Register</button>
+        <button className='btn' type="submit">Register</button>
       </form>
     </div>
   );

@@ -1,4 +1,3 @@
-// NameContext.js
 import React, { useState, createContext } from 'react';
 
 export const NameContext = createContext();
